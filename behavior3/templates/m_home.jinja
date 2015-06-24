@@ -1,0 +1,53 @@
+{% extends "layout.jinja" %}
+
+{% block content %}
+
+<div class="b3-home-banner">
+  <div class="container text-center">
+    <div class="b3-home-banner-text">
+      <h1>Behavior Trees for Everyone</h1>
+    </div>
+    <div class="b3-home-banner-text">
+      <p class="">The <strong>Behavior3</strong> framework provides a set of tools and open specifications for you to create, design and use Behavior Trees for games, simulation, robotics and any other agent-based applications.</p>
+    </div>
+    <!-- <div class="b3-home-banner-text"> -->
+      <a href="http://github.com/behavior3" class="btn btn-home-banner"><i class="fa fa-fw fa-github"></i> See in Github</a>
+    <!-- </div> -->
+  </div>
+</div>
+
+<div class="b3-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 same-height">
+        <div class="panel full-height">
+          <img src="{{url_for('static', filename='imgs/block_editor.jpg')}}" class="img-responsive">
+          <div class="panel-body full-height b3-home-block">
+            <h3>Open Visual Editor</h3>
+            <p>Behavior3 Editor is open-source under MIT license, does not depends on proprietary tools and can be easily extended. <a href="{{url_for('editor')}}">Read more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 same-height">
+        <div class="panel full-height">
+          <img src="{{url_for('static', filename='imgs/block_architecture.jpg')}}" class="img-responsive">
+          <div class="panel-body full-height b3-home-block">
+            <h3>Multi-agent Architecture</h3>
+            <p>Behavior3 libraries follows a simple yet powerful architecture upon a formal and consistent basis, optimized to control multiple agents. <a href="{{url_for('libraries')}}">Read more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 same-height">
+        <div class="panel full-height">
+          <img src="{{url_for('static', filename='imgs/block_format.png')}}" class="img-responsive">
+          <div class="panel-body full-height b3-home-block">
+            <h3>Open Format</h3>
+            <p>Behavior3 uses an open and simple format to describe the behavior trees, thus you can adapt easily to your own library, tool or framework. <a href="{{url_for('documentation')}}">Read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

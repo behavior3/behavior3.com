@@ -1,0 +1,143 @@
+{% extends "layout.jinja" %}
+
+{% block head %}
+<script type="text/javascript">
+  document.onready = function() {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  }
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="b3-subheader">
+  <div class="container">
+    <h1>Libraries <small>officials and community-maintained</small></h1>
+  </div>
+</div>
+
+<div class="b3-block">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>Architecture</h2>
+
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-chevron-circle-right"></i>
+            Based on the work of <a href="http://www.csc.kth.se/~miccol/Michele_Colledanchise/Publications_files/2013_ICRA_mcko.pdf">(Marzinotto et al., 2014)</a>, in which they propose a formal, consistent and general definition of Behavior Trees;
+          </li>
+        </ul>
+
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-chevron-circle-right"></i>
+            Optimized to control multiple agents: you can use a single behavior tree instance to handle hundreds of agents;
+          </li>
+        </ul>
+
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-chevron-circle-right"></i>
+            It was designed to load and save trees in a JSON format, in order to use, edit and test it in multiple environments, tools and languages;
+          </li>
+        </ul>
+
+        <div class="alert alert-info" role="alert"><strong>Note:</strong> you can use your own architecture to load the Behavior3 format.</div>
+      </div>
+
+      <div class="col-sm-4">
+        <a href="{{url_for('static', filename='imgs/architecture.png')}}" class="img-thumbnail" style="margin-top:20px; padding: 15px; background-color:white;"><img class="img-responsive" src="{{url_for('static', filename='imgs/architecture.png')}}"></a>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+<div class="b3-block mod-alternate2">
+  <div class="container">
+    <h2>Official libraries <small>maintained by Behavior3 team</small></h2>
+
+    <!-- BEHAVIOR3 JS -->
+    <h3>Behavior3JS
+      <div class="btn-group pull-right" role="group">
+        <a href="https://github.com/renatopp/behavior3js/releases" class="btn btn-primary"><i class="fa fa-fw fa-download"></i> Download</a>
+        <a href="https://github.com/renatopp/behavior3js/" class="btn btn-success"><i class="fa fa-fw fa-github"></i> Repository</a>
+        <a href="https://github.com/renatopp/behavior3js/wiki" class="btn btn-default"><i class="fa fa-fw fa-book"></i> Documentation</a>
+      </div>
+    </h3>
+    <p>Javascript</p>
+    <div class="row">
+      <div class="col-sm-6">
+
+        <pre class="b3-library-example"><code class="javascript">// Creating a Behavior Tree
+var tree = new b3.BehaviorTree();
+
+tree.root = new b3.Sequence({children: [
+  new b3.Priority({children: [
+    new MyAction(),
+    new b3.Wait(1000)
+  ]})
+]});</code></pre>
+      </div>
+      <div class="col-sm-6">
+        
+        <pre class="b3-library-example"><code class="javascript">// Creating an Action Node
+var MyAction = b3.Class(b3.Action);
+
+MyAction.prototype.name = 'MyAction';
+
+MyAction.prototype.tick = function(tick) {
+    // action code here
+}</code></pre>
+      </div>
+    </div>
+    <!-- END BEHAVIOR3 JS -->
+
+    <!-- BEHAVIOR3 PY -->
+    <h3>Behavior3PY
+      <div class="btn-group pull-right" role="group">
+        <a href="https://github.com/renatopp/behavior3py/releases" class="btn btn-primary"><i class="fa fa-fw fa-download"></i> Download</a>
+        <a href="https://github.com/renatopp/behavior3py/" class="btn btn-success"><i class="fa fa-fw fa-github"></i> Repository</a>
+        <!-- <a href="https://github.com/renatopp/behavior3py/" class="btn btn-default"><i class="fa fa-fw fa-book"></i> Documentation</a> -->
+      </div>
+    </h3>
+    <p>Python</p>
+    <div class="row">
+      <div class="col-sm-6">
+
+        <pre class="b3-library-example"><code class="python">// Creating a Behavior Tree
+tree = b3.BehaviorTree();
+
+tree.root = b3.Sequence(children=[
+  b3.Priority(children=[
+    MyAction(),
+    b3.Wait(1000)
+  ])
+]);</code></pre>
+      </div>
+      <div class="col-sm-6">
+        
+        <pre class="b3-library-example"><code class="python">// Creating an Action Node
+class MyAction(b3.Action):
+    def tick(self):
+        # action code here
+        pass</code></pre>
+      </div>
+    <!-- END BEHAVIOR3 PY -->
+
+    </div>
+  </div>
+</div>
+
+<div class="b3-block mod-alternate">
+  <div class="container">
+    <h2>Community libraries <small>maintained by community folks</small></h2>
+
+    <p>Want to see your library here? <a href="https://github.com/behavior3/behavior3.com/issues">Create an issue.</a></p>
+  </div>
+</div>
+
+{% endblock %}

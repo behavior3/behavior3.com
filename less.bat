@@ -1,0 +1,1 @@
+lessc behavior3/static/less/index.less > behavior3/static/css/style.css

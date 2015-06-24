@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Behavior3 - guineashots.com</title>
+
+  <!-- GA -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63720603-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- END GA -->
+
+  <!-- STYLE -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic|Raleway:400,300' rel='stylesheet' type='text/css'>
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/hover.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/owl.carousel.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/magnificpopup.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/solarized_light.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+  <!-- END STYLE -->
+
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  
+  {% include 'layout/c_header.jinja' %}
+  {% include 'layout/c_message.jinja' %}
+
+  <!-- CONTENT -->
+  {% block content %}{% endblock %}
+  <!-- END CONTENT -->
+
+  <!-- FOOTER -->
+  {% include 'layout/c_footer.jinja' %}
+  <!-- END FOOTER -->
+
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+  <!-- // <script type="text/javascript" src="{{url_for('static', filename='js/jquery.matchheight.min.js')}}"></script> -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.magnificpopup.min.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='js/highlight.pack.js')}}"></script>
+
+  <!-- <link rel="stylesheet/less" type="text/css" href="{{url_for('static', filename='less/index.less')}}" /> -->
+  // <script type="text/javascript" src="{{url_for('static', filename='js/less.min.js')}}"></script>
+  <!-- END SCRIPTS -->
+</body>
+</html>
+

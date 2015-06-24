@@ -1,0 +1,72 @@
+{% extends "layout.jinja" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="b3-subheader">
+  <div class="container">
+    <h1>Donation <small>contribute to the project</small></h1>
+  </div>
+</div>
+
+<div class="b3-block">
+  <div class="container">
+    <h3><i class="fa fa-fw fa-clock-o"></i> Donate time <small>=)</small></h3>
+    
+    <p>There is a lot to do in the project, specially in the editor. You can contribute in several ways:</p>
+
+    <ul>
+      <li><strong>Designers:</strong> if you kick butts in design, you can can make the editor and the site look better.</li>
+      <li><strong>Usability guys:</strong> if you are concerned about usability, there is a lot to in the editor.</li>
+      <li><strong>Translators:</strong> editor, documentation and site could have local translations (to any language).</li>
+      <li><strong>Writers:</strong> documentation and tutorials are really needed.</li>
+      <li><strong>Programmers:</strong>
+        <ul>
+          <li>Create features or fix bugs on the editor (e.g., support multi-user in real-time, dropbox connection, etc...).</li>
+          <li>Write tutorials and examples on your favorite language.</li>
+          <li>Port the Behavior3 library to a new language.</li>
+          <li>Etc...</li>
+        </ul>
+      </li>
+      <li><strong>Everybody:</strong> submit issues, fix documentation, suggest features, be part of the community.</li>
+    </ul>
+
+
+    <h3><i class="fa fa-fw fa-dollar"></i> Donate money <small>=*</small></h3>
+
+    <p>There are some ways to contribute with money:</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><strong>Donate directly</strong> via Bountysource or Paypal</div>
+          <div class="panel-body text-center">
+            <a href="https://www.bountysource.com/teams/behavior3" class="btn btn-success"><i class="fa fa-bitcoin"></i> Bountysource</a><br><br>
+            
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="VX6NNUXNUWU3N">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><strong>Bounty issues</strong> via Bountysource <span class="label label-danger">Recommended!</span></div>
+          <div class="panel-body text-center">
+            <a href="https://www.bountysource.com/teams/behavior3" class="btn btn-success"><i class="fa fa-bitcoin"></i> Bounty b3editor issues</a><br><br>
+            <a href="https://www.bountysource.com/teams/behavior3" class="btn btn-default"><i class="fa fa-bitcoin"></i> Bounty b3js issues</a>
+            <a href="https://www.bountysource.com/teams/behavior3" class="btn btn-default"><i class="fa fa-bitcoin"></i> Bounty b3py issues</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
