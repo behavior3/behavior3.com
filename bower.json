@@ -1,0 +1,13 @@
+{
+  "name": "behavior3.com",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery"         : "*",
+    "bootstrap"      : "*",
+    "fontawesome"    : "*",
+    "magnific-popup" : "*",
+    "highlightjs"    : "*",
+    "hover"          : "*",
+    "owl.carousel"   : "*"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "behavior3.com",
+  "description": "Behavior3 site",
+  "author": "Renato de Pontes Pereira <renato.ppontes@gmail.com>",
+  "devDependencies": {
+    "gulp"            : "*",
+    "gulp-concat"     : "*",
+    "gulp-jshint"     : "*",
+    "gulp-uglify"     : "*",
+    "gulp-less"       : "*",
+    "browser-sync"    : "*",
+    "gulp-minify-css" : "*",
+    "jshint-stylish"  : "*"
+  }
+}
