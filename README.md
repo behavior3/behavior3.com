@@ -1,6 +1,6 @@
 # BEHAVIOR3.COM
 
-Our site http://behavior3.com/
+Our site
 
 
 To run this project you need:
